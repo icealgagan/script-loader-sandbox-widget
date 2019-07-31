@@ -35,8 +35,6 @@ loadSlick(document, 'script', 'slickJS', scriptSrc, function(){
     });
 });
 
-
-
 function loadSlick(d,s,id,url,callback){
     $('#'+id).remove();
     var fjs = d.getElementsByTagName(s)[0];
