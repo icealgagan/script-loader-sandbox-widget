@@ -1,6 +1,22 @@
 //container of the slider
 let containerSlider = $(element).find(".mainSliderContainer"); 
 let scriptSrc = "https://irp-cdn.multiscreensite.com/f49f126e/files/uploaded/slick.min.js";
+let styleSrc  = "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+const cssId = 'fontAwesomeSource';//CREATE FONT AWESOME LINK SOURCE
+
+if (!document.getElementById(cssId)){
+    let head  = document.getElementsByTagName('head')[0];
+    let link  = document.createElement('link');
+    link.id   = 'fontAwesomeSource';
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href =  styleSrc;
+    link.integrity = 'sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU';
+    link.crossOrigin = 'anonymous';
+    head.appendChild(link);
+}
+
+
 
 //settings for the slider get from your data config settings of widget
 loadSlick(document, 'script', 'slickJS', scriptSrc, function(){
@@ -50,16 +66,4 @@ function loadSlick(d,s,id,url,callback){
     fjs.parentNode.insertBefore(script,fjs);
 }
 
-//CREATE FONT AWESOME LINK SOURCE
-const cssId = 'fontAwesomeSource';
-if (!document.getElementById(cssId)){
-    let head  = document.getElementsByTagName('head')[0];
-    let link  = document.createElement('link');
-    link.id   = 'fontAwesomeSource';
-    link.rel  = 'stylesheet';
-    link.type = 'text/css';
-    link.href = 'https://use.fontawesome.com/releases/v5.5.0/css/all.css';
-    link.integrity = 'sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU';
-    link.crossOrigin = 'anonymous';
-    head.appendChild(link);
-}
+
