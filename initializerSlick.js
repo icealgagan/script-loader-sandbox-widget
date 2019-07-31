@@ -16,8 +16,6 @@ if (!document.getElementById(cssId)){
     head.appendChild(link);
 }
 
-
-
 //settings for the slider get from your data config settings of widget
 loadSlick(document, 'script', 'slickJS', scriptSrc, function(){
     containerSlider.fadeIn();
