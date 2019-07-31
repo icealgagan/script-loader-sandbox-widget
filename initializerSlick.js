@@ -1,8 +1,9 @@
 //container of the slider
 let containerSlider = $(element).find(".mainSliderContainer"); 
+let scriptSrc = "https://irp-cdn.multiscreensite.com/f49f126e/files/uploaded/slick.min.js";
 
 //settings for the slider get from your data config settings of widget
-loadSlick(document, 'script','slickJS','https://irp-cdn.multiscreensite.com/f49f126e/files/uploaded/slick.min.js',function(){
+loadSlick(document, 'script', 'slickJS', scriptSrc, function(){
     containerSlider.fadeIn();
     containerSlider.slick({
         autoplay:autoplay,
