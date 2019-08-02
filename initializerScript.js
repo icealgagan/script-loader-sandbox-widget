@@ -17,7 +17,7 @@ if (!document.getElementById(cssId)){
 }
 
 //settings for the slider get from your data config settings of widget
-loadSlick(document, 'script', 'slickJS', scriptSrc, function(){
+loadScript(document, 'script', 'slickJS', scriptSrc, function(){
     containerSlider.fadeIn();
     containerSlider.slick({
         autoplay:autoplay,
@@ -35,7 +35,7 @@ loadSlick(document, 'script', 'slickJS', scriptSrc, function(){
     });
 });
 
-function loadSlick(d,s,id,url,callback){
+function loadScript(d,s,id,url,callback){
     $('#'+id).remove();
     var fjs = d.getElementsByTagName(s)[0];
     if(d.getElementById(id)){return}
